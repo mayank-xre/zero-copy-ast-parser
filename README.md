@@ -28,7 +28,6 @@ Tested with 10,000,000 messages across 100,000 unique payloads pinned to Apple M
 | **Nested Expressions**| ~205.9 bytes | **4.28 M/s** | **0.882 GB/s** | **233.4 ns** |
 | **Long Messages** | ~1459.1 bytes | **0.72 M/s** | **1.049 GB/s** | **1390.9 ns** |
 
-*Note: The parser maintains a consistent ~1.0–1.07 GB/s byte-processing throughput across varying payload complexities.*
 
 ## Architecture Overview
 
@@ -88,7 +87,7 @@ clang++ -std=c++20 -O3 -march=native -flto=thin main.cpp -o benchmark
 g++ -std=c++20 -O3 -march=native -flto=thin main.cpp -o benchmark 
 
 # Run the benchmark suite
-./benchmark_run
+./benchmark
 ```
 
 ---
